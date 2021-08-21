@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="btnSum" layoutX="32.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleBtnSum" text="Sum" />
+      <TextField fx:id="txtNumber1" layoutX="32.0" layoutY="21.0" promptText="Number 1" />
+      <TextField fx:id="txtNumber2" layoutX="32.0" layoutY="57.0" promptText="Number 2" />
+      <TextField fx:id="txtSum" editable="false" layoutX="32.0" layoutY="93.0" promptText="Sum" />
+      <TextArea fx:id="txtaComments" layoutX="379.0" layoutY="18.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextField fx:id="txtComment" layoutX="215.0" layoutY="21.0" promptText="Comment" />
+      <Button fx:id="btnAddText" layoutX="300.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleBtnAddText" text="Add Text" />
+      <CheckBox fx:id="chkApple" layoutX="215.0" layoutY="97.0" mnemonicParsing="false" text="Apple" />
+      <CheckBox fx:id="chkOrange" layoutX="215.0" layoutY="118.0" mnemonicParsing="false" text="Orange" />
+      <CheckBox fx:id="chkPear" layoutX="215.0" layoutY="140.0" mnemonicParsing="false" text="Pear" />
+      <Button fx:id="btnAddText1" layoutX="210.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleBtnAddFruit" text="Add Fruit" />
+      <Button fx:id="btnClearTA" layoutX="300.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleBtnClearTA" text="Clear" />
+   </children>
+</AnchorPane>
