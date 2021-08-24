@@ -2,14 +2,25 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 
+import java.net.URL;
 import java.util.Arrays;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
 
+    @FXML
+    private ChoiceBox chbDrink;
+    @FXML
+    private RadioButton rbBarca;
+    @FXML
+    private RadioButton rbJuve;
+    @FXML
+    private RadioButton rbManutd;
+    @FXML
+    private TextField txtTeamName;
     @FXML
     private CheckBox chkApple;
     @FXML
@@ -72,5 +83,27 @@ public class Controller {
     private void handleBtnClearTA(ActionEvent event) {
         txtaComments.setText("");
         checkBoxesDeselect();
+    }
+
+    @FXML
+    private void handleBtnAddTeam(ActionEvent event) {
+        if (rbBarca.isSelected()) txtTeamName.setText(rbBarca.getText());
+        if (rbManutd.isSelected()) txtTeamName.setText(rbManutd.getText());
+        if (rbJuve.isSelected()) txtTeamName.setText(rbJuve.getText());
+    }
+
+    @FXML
+    private void handleBtnAddDrink(ActionEvent event) {
+        txtaComments.setText((String) chbDrink.getSelectionModel().getSelectedItem());
+    }
+
+    private void initChbDrink() {
+        chbDrink.setValue("Wine");
+        chbDrink.getItems().addAll("Wine","Soda","Bear");
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        initChbDrink();
     }
 }

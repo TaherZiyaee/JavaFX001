@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Button fx:id="btnSum" layoutX="32.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleBtnSum" text="Sum" />
       <TextField fx:id="txtNumber1" layoutX="32.0" layoutY="21.0" prefHeight="30.0" prefWidth="150.0" promptText="Number 1" />
@@ -14,11 +17,25 @@
       <TextField fx:id="txtSum" editable="false" layoutX="32.0" layoutY="93.0" prefHeight="30.0" prefWidth="150.0" promptText="Sum" />
       <TextArea fx:id="txtaComments" layoutX="386.0" layoutY="18.0" prefHeight="200.0" prefWidth="200.0" />
       <TextField fx:id="txtComment" layoutX="215.0" layoutY="21.0" prefHeight="30.0" prefWidth="150.0" promptText="Comment" />
-      <Button fx:id="btnAddText" layoutX="300.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleBtnAddText" text="Add Text" />
-      <CheckBox fx:id="chkApple" layoutX="215.0" layoutY="97.0" mnemonicParsing="false" text="Apple" />
-      <CheckBox fx:id="chkOrange" layoutX="215.0" layoutY="118.0" mnemonicParsing="false" text="Orange" />
-      <CheckBox fx:id="chkPear" layoutX="215.0" layoutY="140.0" mnemonicParsing="false" text="Pear" />
-      <Button fx:id="btnAddText1" layoutX="210.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleBtnAddFruit" text="Add Fruit" />
-      <Button fx:id="btnClearTA" layoutX="300.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleBtnClearTA" text="Clear" />
+      <Button fx:id="btnAddText" layoutX="214.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleBtnAddText" text="Add Text" />
+      <CheckBox fx:id="chkApple" layoutX="313.0" layoutY="104.0" mnemonicParsing="false" text="Apple" />
+      <CheckBox fx:id="chkOrange" layoutX="313.0" layoutY="125.0" mnemonicParsing="false" text="Orange" />
+      <CheckBox fx:id="chkPear" layoutX="313.0" layoutY="147.0" mnemonicParsing="false" text="Pear" />
+      <Button fx:id="btnAddText1" layoutX="311.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleBtnAddFruit" text="Add Fruit" />
+      <Button fx:id="btnClearTA" layoutX="322.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleBtnClearTA" text="Clear" />
+      <RadioButton fx:id="rbManutd" layoutX="29.0" layoutY="238.0" mnemonicParsing="false" text="Manchester United">
+         <toggleGroup>
+            <ToggleGroup fx:id="tgTeams" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbBarca" layoutX="29.0" layoutY="264.0" mnemonicParsing="false" text="FC Barcelona" toggleGroup="$tgTeams" />
+      <RadioButton fx:id="rbJuve" layoutX="30.0" layoutY="290.0" mnemonicParsing="false" text="Juventus" toggleGroup="$tgTeams" />
+      <TextField fx:id="txtTeamName" editable="false" layoutX="32.0" layoutY="201.0" prefHeight="30.0" prefWidth="150.0" promptText="Team Name" />
+      <Button fx:id="btnAddTeam" layoutX="32.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleBtnAddTeam" text="Add Team" />
+      <Separator layoutX="19.0" layoutY="186.0" prefWidth="250.0" />
+      <Separator layoutX="196.0" layoutY="18.0" orientation="VERTICAL" prefHeight="150.0" />
+      <Separator layoutX="196.0" layoutY="204.0" orientation="VERTICAL" prefHeight="150.0" />
+      <ChoiceBox fx:id="chbDrink" layoutX="411.0" layoutY="226.0" prefWidth="150.0" />
+      <Button fx:id="btnAddDrink" layoutX="492.0" layoutY="260.0" mnemonicParsing="false" onAction="#handleBtnAddDrink" text="Add Drink" />
    </children>
 </AnchorPane>
