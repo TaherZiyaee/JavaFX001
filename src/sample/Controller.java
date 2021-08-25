@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,6 +13,10 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
+    @FXML
+    private ComboBox cbCar;
+    private final String[] carsItems = {"Benz","BMW","Aston martin","KIA"};
+    ObservableList<String> carsList = FXCollections.observableArrayList(carsItems);
     @FXML
     private ChoiceBox chbDrink;
     @FXML
@@ -94,7 +100,7 @@ public class Controller implements Initializable {
 
     @FXML
     private void handleBtnAddDrink(ActionEvent event) {
-        txtaComments.setText((String) chbDrink.getSelectionModel().getSelectedItem());
+        txtaComments.appendText((String) chbDrink.getSelectionModel().getSelectedItem() + "\n");
     }
 
     private void initChbDrink() {
@@ -102,8 +108,18 @@ public class Controller implements Initializable {
         chbDrink.getItems().addAll("Wine","Soda","Bear");
     }
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initChbDrink();
+
+        cbCar.setItems(carsList);
+        cbCar.setValue(carsList.get(0));
+    }
+
+    @FXML
+    private void handleBtnSelectCar(ActionEvent event) {
+        if (!isExistFruit(String.valueOf(cbCar.getSelectionModel().getSelectedItem())))
+            txtaComments.appendText(cbCar.getSelectionModel().getSelectedItem() + "\n");
     }
 }

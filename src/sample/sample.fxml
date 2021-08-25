@@ -37,5 +37,7 @@
       <Separator layoutX="196.0" layoutY="204.0" orientation="VERTICAL" prefHeight="150.0" />
       <ChoiceBox fx:id="chbDrink" layoutX="411.0" layoutY="226.0" prefWidth="150.0" />
       <Button fx:id="btnAddDrink" layoutX="492.0" layoutY="260.0" mnemonicParsing="false" onAction="#handleBtnAddDrink" text="Add Drink" />
+      <ComboBox fx:id="cbCar" layoutX="411.0" layoutY="295.0" prefWidth="150.0" />
+      <Button fx:id="btnSelectCar" layoutX="493.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleBtnSelectCar" text="Select Car" />
    </children>
 </AnchorPane>
